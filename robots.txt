@@ -1,0 +1,17 @@
+# ==========================================
+# Robots.txt pour WantersV1 Website
+# Optimisé pour l'hébergement Render
+# ==========================================
+
+User-agent: *
+Allow: /
+Allow: /download
+Allow: /about
+Allow: /contacts
+Allow: /terms
+
+# Empêcher le crawl inutile des assets CSS/JS/images isolés
+Disallow: /static/
+
+# Lien absolu vers la sitemap pour les robots d'indexation
+Sitemap: https://wantersv1-website.onrender.com/sitemap.xml
