@@ -35,5 +35,9 @@ def robots():
 def sitemap():
     return send_from_directory(app.static_folder, 'sitemap.xml')
 
+@app.route('/googlea128813747473c36.html')
+def google_verification():
+    return send_from_directory(app.static_folder, 'googlea128813747473c36.html')
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
