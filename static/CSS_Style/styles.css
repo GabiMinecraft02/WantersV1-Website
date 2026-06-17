@@ -1,0 +1,189 @@
+/* ==========================================================================
+   1. RESET & BASES REGLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f5f5f5;
+    line-height: 1.6;
+    background: #121212 url('/static/MainBackground.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Arrière-plan spécifique pour la page Contact */
+body.contact-page {
+    background: #121212 url('/static/ContactBackgrounds.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ==========================================================================
+   2. EN-TÊTE & NAVIGATION
+   ========================================================================== */
+header {
+    background-color: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid #555;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #00ffcc; /* Une touche fluo style modding/cyberpunk */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+nav a:hover {
+    background-color: #00ffcc;
+    color: #121212;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+/* ==========================================================================
+   3. CONTENU PRINCIPAL (MAIN)
+   ========================================================================== */
+main {
+    flex: 1;
+    max-width: 850px;
+    width: 90%;
+    margin: 3rem auto;
+    background-color: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(5px);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+main h2 {
+    color: #00ffcc;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(0,255,204, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+main h3 {
+    color: #ffcc00; /* Jaune or pour les sous-titres importants */
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+/* Mises en valeur importantes (Avertissements) */
+main strong {
+    display: block;
+    background-color: rgba(255, 51, 51, 0.15);
+    color: #ff3333;
+    padding: 1rem;
+    border-left: 5px solid #ff3333;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+}
+
+/* Listes (Téléchargements & Conditions d'utilisation) */
+main ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+main li {
+    margin-bottom: 0.8rem;
+}
+
+main li strong {
+    display: inline;
+    padding: 0;
+    background: none;
+    border: none;
+    margin: 0;
+}
+
+/* Liens généraux et boutons dans le contenu */
+main a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+main a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Boutons d'action spécifiques pour la page Contact & Downloads */
+.contact-page main a, 
+html:not(:has(nav)) main a { /* Cible les liens qui agissent comme des boutons */
+    display: inline-block;
+    background-color: rgba(0, 255, 204, 0.1);
+    border: 1px solid #00ffcc;
+    padding: 0.7rem 1.2rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.contact-page main a:hover {
+    background-color: #00ffcc;
+    color: #121212;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* Modificateur pour les liens de vos amis */
+.contact-page main h3 ~ a {
+    border-color: #ffcc00;
+    background-color: rgba(255, 204, 0, 0.1);
+    color: #ffcc00;
+}
+
+.contact-page main h3 ~ a:hover {
+    background-color: #ffcc00;
+    color: #121212;
+}
+
+/* ==========================================================================
+   4. PIED DE PAGE (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #222;
+}
